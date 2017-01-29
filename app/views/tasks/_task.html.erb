@@ -1,0 +1,14 @@
+<tr>
+	<td><%= task.content %></td>
+	<td><%= link_to 'Show', task %></td>
+	<td><%= link_to 'Edit', edit_task_path(task) %></td>
+	<td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	<td colspan="4"></td>
+	<td><%= task.state %></td>
+	<% if task.state == "to_do"  || task.state =="done" %>
+	<td><%= link_to "Mark as doing", change_task_path(task,state: "doing"),method: :put %>
+		<% else %>
+		<td><%= link_to "Mark as to_do", change_task_path(task,state: "to_do"),method: :put %>
+			<td><%= link_to "Mark as done", change_task_path(task,state: "done"),method: :put %>
+				<% end %>
+</tr>
