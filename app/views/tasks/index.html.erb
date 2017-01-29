@@ -1,0 +1,88 @@
+<p id="notice"><%= notice %></p>
+
+<h1>To do***</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th colspan="7"></th>
+      <th>State</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @to_do.each do |task| %>
+      <tr>
+        <td><%= task.content %></td>
+        <td><%= link_to 'Show', task %></td>
+        <td><%= link_to 'Edit', edit_task_path(task) %></td>
+        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td colspan="4"></td>
+        <td><%= task.state %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<br>
+
+<!--Doing -->
+<h1>Doing***</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th colspan="7"></th>
+      <th>State</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @doing.each do |task| %>
+      <tr>
+        <td><%= task.content %></td>
+        <td><%= link_to 'Show', task %></td>
+        <td><%= link_to 'Edit', edit_task_path(task) %></td>
+        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td colspan="4"></td>
+        <td><%= task.state %></td>
+      </tr>    
+      
+    <% end %>
+  </tbody>
+</table>
+<br>
+<br>
+
+<!--Done-->
+<h1>Done***</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th colspan="7"></th>
+      <th>State</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @done.each do |task| %>
+      <tr>
+        <td><%= task.content %></td>
+        <td><%= link_to 'Show', task %></td>
+        <td><%= link_to 'Edit', edit_task_path(task) %></td>
+        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td colspan="4"></td>
+        <td><%= task.state %></td>
+      </tr>
+      
+        
+      
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Task', new_task_path %>
