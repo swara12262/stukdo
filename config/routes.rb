@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   		put :change
   	end
   end
+  get 'test' => 'pages#test'
    devise_for :users
     
 devise_scope :user do  
