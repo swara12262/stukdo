@@ -20,7 +20,7 @@ test:
   <<: *default
   database: db/test.sqlite3
 
-<<<<<<< HEAD
+
 production: 
  adapter: postgresql
  database: todoism
@@ -29,12 +29,10 @@ production:
  pool: 5
  timeout: 5000
 
-=======
 production:
-	adapter: postgresql
-	database: todoism
-	encoding: utf8
-	min_messages: Warning
-	pool: 5
-	timeout: 5000
->>>>>>> d438f35386ba69185b982cba17f046af51b53659
+ adapter: postgresql
+ database: todoism
+ encoding: utf8
+ min_messages: Warning
+ pool: 5
+ timeout: 5000
